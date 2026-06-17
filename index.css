@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. GLOBAL REFRESH & STARTUP DARK ROOT CONFIG
-   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -37,9 +34,7 @@ body {
     padding: 0 24px;
 }
 
-/* ==========================================================================
-   2. TOP BAR & UTILITY TEXT HEADER
-   ========================================================================== */
+
 .top-bar {
     background: #000000;
     border-bottom: 1px solid var(--glass-border);
@@ -188,7 +183,7 @@ body {
 
 .slide-track {
     display: flex;
-    width: 500vw; /* 5 Slides config mapping layout */
+    width: 500vw; 
     height: 100%;
     transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
 }
@@ -205,7 +200,6 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Master high-res imagery mappings utilizing dynamic glass overlays */
 #target-slide-1 { background-image: linear-gradient(to right, rgba(3,3,3,0.95) 40%, rgba(3,3,3,0.4)), url('https://www.banarasistarterking.com/img/slider/4.png'); }
 #target-slide-2 { background-image: linear-gradient(to right, rgba(3,3,3,0.95) 40%, rgba(3,3,3,0.4)), url('https://www.banarasistarterking.com/img/slider/5.png'); }
 #target-slide-3 { background-image: linear-gradient(to right, rgba(3,3,3,0.95) 40%, rgba(3,3,3,0.4)), url('https://www.banarasistarterking.com/img/slider/1.png'); }
@@ -280,7 +274,7 @@ body {
     transform: scale(1.03);
 }
 
-/* Slider Controls Indicators Interface Engine overlay */
+
 .hero-dots-navigation {
     position: absolute;
     bottom: 40px;
@@ -309,9 +303,7 @@ body {
     box-shadow: 0 0 12px var(--accent-glow-amber);
 }
 
-/* ==========================================================================
-   5. VALUE PROPOSITION MATRIX HERO SECTION ALTERNATIVE
-   ========================================================================== */
+
 .hero-section {
     padding: 100px 0;
     background: radial-gradient(circle at 50% 0%, #111115, var(--bg-dark-core));
@@ -594,7 +586,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Structural Engine Filter CSS states bindings mapping code */
+
 #tab-all-input:checked ~ .menu-filter-navigation-tabs #label-all,
 #tab-starter-input:checked ~ .menu-filter-navigation-tabs #label-starter,
 #tab-main-input:checked ~ .menu-filter-navigation-tabs #label-main,
@@ -669,9 +661,6 @@ body {
     display: none;
 }
 
-/* ==========================================================================
-   8. SERVICE GRID BOX LAYOUT
-   ========================================================================== */
 .services-section { padding: 120px 24px; }
 .text-center-wrapper { text-align: center; margin-bottom: 64px; }
 .services-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
@@ -701,9 +690,7 @@ body {
     font-size: 14px;
 }
 
-/* ==========================================================================
-   9. TESTIMONIAL CAROUSEL TRANSFORMS VIA RADIO
-   ========================================================================== */
+
 .testimonials-bg-strip {
     background: var(--bg-dark-surface);
     padding: 100px 0;
@@ -778,9 +765,7 @@ body {
     background: var(--accent-neon-amber);
 }
 
-/* ==========================================================================
-   10. CONTACT COMPONENT GRID AREA ARCHITECTURE
-   ========================================================================== */
+
 .contact-section {
     padding: 120px 24px;
     display: grid;
@@ -819,7 +804,9 @@ body {
     border-radius: 16px;
 }
 
-.operating-hours-box h4 { margin-bottom: 16px; }
+.operating-hours-box h4 {
+     margin-bottom: 16px; 
+    }
 .hours-line {
     display: flex;
     justify-content: space-between;
@@ -837,9 +824,7 @@ body {
     filter: grayscale(1) invert(0.92) contrast(1.1); /* Match modern dark mode profiles */
 }
 
-/* ==========================================================================
-   11. STRUCTURAL DOCUMENT CORPORATE FOOTER
-   ========================================================================== */
+
 .main-footer {
     background: #000000;
     border-top: 1px solid var(--glass-border);
@@ -877,7 +862,9 @@ body {
     transition: color 0.2s ease;
 }
 
-.footer-links-column a:hover { color: #ffffff; }
+.footer-links-column a:hover { 
+    color: #ffffff;
+ }
 
 .footer-copyright-row {
     border-top: 1px solid var(--glass-border);
@@ -891,9 +878,7 @@ body {
     font-size: 13px;
 }
 
-/* ==========================================================================
-   12. TARGET CSS ENQUIRY MODAL DISPLAY SYSTEM
-   ========================================================================== */
+
 .modal-window-overlay {
     position: fixed;
     top: 0;
@@ -935,8 +920,14 @@ body {
     font-size: 20px;
 }
 
-.modal-headline-title { font-size: 24px; margin-bottom: 8px; }
-.modal-summary-text { color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+.modal-headline-title { 
+    font-size: 24px; margin-bottom: 8px;
+ }
+.modal-summary-text {
+     color: var(--text-muted);
+      font-size: 14px;
+       margin-bottom: 24px;
+     }
 
 .form-control-group {
     margin-bottom: 20px;
@@ -946,7 +937,11 @@ body {
     text-align: left;
 }
 
-.form-control-group label { font-size: 13px; font-weight: 600; color: #ffffff; }
+.form-control-group label {
+     font-size: 13px;
+      font-weight: 600;
+       color: #ffffff; 
+    }
 
 .form-control-group input, .form-control-group textarea {
     background: var(--bg-dark-surface);
@@ -973,14 +968,19 @@ body {
     transition: background 0.2s ease;
 }
 
-.modal-submit-button:hover { background: var(--accent-neon-amber); }
+.modal-submit-button:hover { 
+    background: var(--accent-neon-amber); 
+}
 
-/* ==========================================================================
-   13. COMPREHENSIVE RESPONSIVE DESIGN ADJUSTMENTS
-   ========================================================================== */
+
 @media (max-width: 1024px) {
-    .about-section, .contact-section { grid-template-columns: 1fr; gap: 48px; }
-    .footer-columns-layout-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-section, .contact-section {
+         grid-template-columns: 1fr; 
+         gap: 48px;
+         }
+    .footer-columns-layout-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
 
 @media (max-width: 768px) {
