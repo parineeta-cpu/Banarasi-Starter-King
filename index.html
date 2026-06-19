@@ -380,51 +380,363 @@
         </div>
     </div>
 </section>
-<script>
-document.addEventListener("DOMContentLoaded",()=>{
 
+<!-- ==========================================
+    REVIEWS SECTION
+    ========================================== -->
+<section class="reviews-section" id="testimonials">
+  <div class="rv-bg-deco d1">"</div>
+  <div class="rv-bg-deco d2">"</div>
+
+  <span class="section-meta-tag" style="display:block;text-align:center;">Testimonials &amp; Reviews</span>
+  <h2 class="section-title">What Our Customers Say</h2>
+  <p class="section-subtitle text-center">Real words from real food lovers — straight from the heart of Banaras.</p>
+
+  <!-- 1. ADDED TRACK WRAPPER FOR SCROLLING/VIEWPORT BOUNDS -->
+  <div class="rv-track-wrap">
+    
+    <!-- 2. ADDED THE MISSING TRACK ELEMENT THAT JAVASCRIPT TARGETS -->
+    <div class="rv-track" style="display: flex; transition: transform 0.3s ease;">
+
+      <div class="rv-card">
+        <div class="rv-badge">Top Review</div>
+        <span class="rv-quote-icon">"</span>
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">Dining here was an experience in itself! The authenticity of the flavors took me straight to the streets of Varanasi. Loved every single bite!</p>
+        <div class="rv-divider"></div>
+        <div class="rv-author-row">
+          <div class="rv-avatar">RV</div>
+          <div>
+            <div class="rv-name">Rohit Verma</div>
+            <div class="rv-location">📍 Varanasi, India</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <span class="rv-quote-icon">"</span>
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">I've traveled across India, but the chaats and kebabs here are in a league of their own. True taste of Banaras in every dish.</p>
+        <div class="rv-divider"></div>
+        <div class="rv-author-row">
+          <div class="rv-avatar">MS</div>
+          <div>
+            <div class="rv-name">Meenal Shah</div>
+            <div class="rv-location">📍 BHU, Varanasi</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <span class="rv-quote-icon">"</span>
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">Whether starters or sweets, they deliver top-notch quality every time. It's my absolute go-to place when I crave something truly delicious.</p>
+        <div class="rv-divider"></div>
+        <div class="rv-author-row">
+          <div class="rv-avatar">AP</div>
+          <div>
+            <div class="rv-name">Arjun Pillai</div>
+            <div class="rv-location">📍 Gadaulia, Varanasi</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <span class="rv-quote-icon">"</span>
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">Incredible hospitality, mouth-watering dishes, and that authentic Banarasi touch — Banarasi Starter King has it all. Highly recommended!</p>
+        <div class="rv-divider"></div>
+        <div class="rv-author-row">
+          <div class="rv-avatar">PR</div>
+          <div>
+            <div class="rv-name">Priya Raut</div>
+            <div class="rv-location">📍 Lanka, Varanasi</div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /rv-track -->
+  </div> <!-- /rv-track-wrap -->
+
+  <div class="rv-dots" id="rvDots">
+    <button class="rv-dot active" data-i="0" aria-label="Review 1"></button>
+    <button class="rv-dot" data-i="1" aria-label="Review 2"></button>
+    <button class="rv-dot" data-i="2" aria-label="Review 3"></button>
+    <button class="rv-dot" data-i="3" aria-label="Review 4"></button>
+  </div>
+  
+  <div class="rv-stats-row">
+    <div class="rv-stat">
+      <div class="rv-stat-val">4.9★</div>
+      <div class="rv-stat-lbl">Average Rating</div>
+    </div>
+    <div class="rv-stat">
+      <div class="rv-stat-val">500+</div>
+      <div class="rv-stat-lbl">Happy Customers</div>
+    </div>
+    <div class="rv-stat">
+      <div class="rv-stat-val">100%</div>
+      <div class="rv-stat-lbl">Veg &amp; Fresh</div>
+    </div>
+  </div>
+</section>
+ <div class="booking-section-raw" id="book-now">
+    
+    <div class="booking-left-col">
+        <div class="booking-form-box">
+            <span class="booking-sub">Reservation</span>
+            <h2 class="booking-head">Book A Table</h2>
+            
+            <form class="raw-booking-form" onsubmit="event.preventDefault();">
+                <div class="raw-form-row">
+                    <div class="raw-form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="e.g. Aditi Sharma" required>
+                    </div>
+                    <div class="raw-form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="e.g. +91 98765 43210" required>
+                    </div>
+                </div>
+
+                <div class="raw-form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="name@example.com" required>
+                </div>
+
+                <div class="raw-form-group">
+                    <label>Full Address</label>
+                    <input type="text" placeholder="Street, Apartment, City" required>
+                </div>
+
+                <div class="raw-form-row triple-split">
+                    <div class="raw-form-group">
+                        <label>Booking Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="raw-form-group">
+                        <label>No. of People</label>
+                        <select required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="4">4 People</option>
+                            <option value="6">6 People</option>
+                            <option value="8">8+ People</option>
+                        </select>
+                    </div>
+                    <div class="raw-form-group">
+                        <label>Cuisine</label>
+                        <select required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="italian">Italian Fine Dine</option>
+                            <option value="continental">Continental</option>
+                            <option value="indian">Royal North Indian</option>
+                            <option value="asian">Authentic Asian</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="raw-submit-btn">
+                    Confirm Reservation <span>→</span>
+                </button>
+            </form>
+        </div>
+    </div>
+<!-- RIGHT SIDE: HIGH-END INTERACTIVE SHOWCASE GRID -->
+<div class="booking-dynamic-showcase">
+    
+    <!-- Glow Effect Ring behind the blocks (Decorative) -->
+    <div class="glow-pulse-ring"></div>
+
+    <!-- 1. The Main Premium Card with Sliding Marquee -->
+    <div class="glow-card hero-visual-card">
+        <div class="image-zoom-container">
+            <img src="https://www.banarasistarterking.com/img/slider/1.png" alt="Authentic Banarasi Starters Cooking" class="pulse-showcase-img">
+            <div class="luxury-gradient-shimmer"></div>
+        </div>
+        
+        <!-- Sliding Infinite Text Badge (Tadakta Bhadakta Element) -->
+        <div class="infinite-marquee-badge">
+            <div class="marquee-track">
+                <span>🔥 CHEF'S SIGNATURE RECIPES &nbsp;&bull;&nbsp; TRADITION MEET LUXURY &nbsp;&bull;&nbsp; 🔥 CHEF'S SIGNATURE RECIPES &nbsp;&bull;&nbsp; TRADITION MEET LUXURY &nbsp;&bull;&nbsp;</span>
+            </div>
+        </div>
+
+        <div class="glow-card-content">
+            <h3 class="shimmer-text">Crafted with Tradition, Served with Elegance.</h3>
+        </div>
+    </div>
+
+    <!-- 2. Bottom Row: Interactive Floating Cards -->
+    <div class="dynamic-bento-row">
+        
+        <!-- Left Spicy Box with Float Animation -->
+        <div class="glow-card bento-mini-box float-up-1">
+            <div class="bento-icon-wrapper spicy-glow">🌶️</div>
+            <div class="bento-box-info">
+                <h4>100% Pure</h4>
+                <p>Authentic local spices sourced fresh from Varanasi</p>
+            </div>
+            <!-- Interactive Line Accent -->
+            <div class="card-hover-line"></div>
+        </div>
+
+        <!-- Right Royal Box with Alternate Float Animation -->
+        <div class="glow-card bento-mini-box royal-dark-box float-up-2">
+            <div class="bento-icon-wrapper royal-glow">👑</div>
+            <div class="bento-box-info">
+                <h4>Royal Dine</h4>
+                <p>A premium heritage food experience reimagined</p>
+            </div>
+            <!-- Interactive Line Accent -->
+            <div class="card-hover-line primary-accent"></div>
+        </div>
+
+    </div>
+
+    <!-- Retro Neon Stamp Badge -->
+    <div class="neon-retro-stamp">EST. 2026</div>
+</div>
+</div>
+<!-- ==========================================
+     PREMIUM FOOTER SECTION
+     ========================================== -->
+<footer class="site-footer">
+    <div class="footer-container">
+        
+        <!-- Brand / Identity Column -->
+        <div class="footer-column brand-col">
+            <h3 class="footer-logo">Banarasi Starter King</h3>
+            <p class="footer-tagline">Serving authentic, royal flavors and unforgettable culinary experiences straight from the heart of Varanasi.</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="Facebook">🌐</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+            </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#menu">Our Menu</a></li>
+                <li><a href="#book-now">Book A Table</a></li>
+                <li><a href="#about">Our Story</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information Column (Your Details) -->
+        <div class="footer-column contact-col">
+            <h4>Contact Us</h4>
+            <ul class="footer-contact-info">
+                <li>
+                    <span class="f-icon">📍</span>
+                    <span class="f-text">S-10/188 Hukulganj, Varanasi</span>
+                </li>
+                <li>
+                    <span class="f-icon">📞</span>
+                    <span class="f-text">
+                        <a href="tel:+919918675266">+91 9918675266</a><br>
+                        <a href="tel:+919450412211">+91 9450412211</a>
+                    </span>
+                </li>
+                <li>
+                    <span class="f-icon">✉️</span>
+                    <span class="f-text"><a href="mailto:banarasifood@gmail.com">banarasifood@gmail.com</a></span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Banarasi Starter King. All Rights Reserved. Crafted with ❤️</p>
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* ==========================================
+       1. REVIEWS SLIDER DOTS INTERACTION LOGIC
+       ========================================== */
+    const track = document.querySelector(".rv-track");
+    const dots = document.querySelectorAll(".rv-dot");
+    const cards = document.querySelectorAll(".rv-card");
+
+    if (track && dots.length > 0) {
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                // Remove active class from all dots
+                dots.forEach(d => d.classList.remove("active"));
+                // Add active class to clicked dot
+                dot.classList.add("active");
+
+                // Layout Calculation for sliding track
+                // Calculates offset shift dynamically based on card gap configurations
+                let moveAmount = index * 100;
+                
+                // Responsiveness adjustments for tracking slider gaps
+                if (window.innerWidth > 992) {
+                    track.style.transform = `translateX(-${index * 33.33}%)`;
+                } else {
+                    track.style.transform = `translateX(-${moveAmount}%)`;
+                }
+            });
+        });
+
+        // Auto re-align on window resize handler
+        window.addEventListener("resize", () => {
+            const activeDot = document.querySelector(".rv-dot.active");
+            if (activeDot) activeDot.click();
+        });
+    }
+
+    /* ==========================================
+       2. INTERSECTION OBSERVER: MENU CARDS
+       ========================================== */
     const menuCards = document.querySelectorAll(".menu-card");
     const menuObserverOptions = {
         root: null,
         rootMargin: "0px",
         threshold: 0.12 
     };
+
     const menuObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("revealed");
-                observer.unobserve(entry.target); // Engine processing safety clear
+                observer.unobserve(entry.target); 
             }
-
         });
     }, menuObserverOptions);
-    menuCards.forEach(card => {
-        menuObserver.observe(card);
-    });
-} ); 
-document.addEventListener("DOMContentLoaded",()=>{
 
+    menuCards.forEach(card => menuObserver.observe(card));
+
+    /* ==========================================
+       3. INTERSECTION OBSERVER: SERVICE CARDS
+       ========================================== */
     const serviceCards = document.querySelectorAll(".service-card");
     const serviceObserverOptions = {
         root: null,
         rootMargin: "0px",
         threshold: 0.12 
     };
+
     const serviceObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("revealed");
-                observer.unobserve(entry.target); // Engine processing safety clear
+                observer.unobserve(entry.target);
             }
-
         });
     }, serviceObserverOptions);
-    serviceCards.forEach(card => {
-        serviceObserver.observe(card);
-    });
-} ); 
 
-   
+    serviceCards.forEach(card => serviceObserver.observe(card));
+
+});
 </script>
 </body>
 </html>

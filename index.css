@@ -767,6 +767,187 @@ body {
 .service-card.revealed:nth-child(6) { transition-delay: 0.2s; }
 
 /* ==========================================
+   REVIEWS SECTION
+   ========================================== */
+.reviews-section {
+    padding: 100px 8%;
+    background: #f7efe8;
+    position: relative;
+    overflow: hidden;
+}
+
+.rv-meta {
+    color: #d3442f;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* DESKTOP — simple grid */
+.rv-track-wrap { width: 100%; }
+
+.rv-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.rv-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 40px rgba(44, 33, 24, 0.05);
+    padding: 32px 28px 26px 28px;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+}
+
+.rv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 60px rgba(44, 33, 24, 0.10);
+}
+
+.rv-badge {
+    position: absolute;
+    top: -11px;
+    left: 20px;
+    background: #d3442f;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.rv-qmark {
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #d3442f;
+    opacity: 0.12;
+    font-family: Georgia, serif;
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    user-select: none;
+}
+
+.rv-stars {
+    color: #ffb600;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.rv-text {
+    font-size: 0.93rem;
+    line-height: 1.7;
+    color: #5c5249;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.rv-divider {
+    height: 1px;
+    background: rgba(44, 33, 24, 0.08);
+    margin-bottom: 16px;
+}
+
+.rv-author-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rv-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2c2118, #463428);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffb600;
+    flex-shrink: 0;
+}
+
+.rv-name {
+    font-weight: 700;
+    color: #2c2118;
+    font-size: 0.95rem;
+}
+
+.rv-loc {
+    font-size: 0.75rem;
+    color: #8c8278;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+/* DOTS — hidden on desktop */
+.rv-dots { display: none; }
+
+.rv-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c8bfb8;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    flex-shrink: 0;
+    transition: background 0.3s, width 0.3s, border-radius 0.3s;
+}
+
+.rv-dot.active {
+    background: #d3442f;
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* STATS ROW */
+.rv-stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 36px;
+    border-top: 1px solid rgba(44, 33, 24, 0.10);
+    max-width: 700px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.rv-stat { text-align: center; }
+
+.rv-stat-val {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #d3442f;
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+}
+
+.rv-stat-lbl {
+    font-size: 0.75rem;
+    color: #6e645a;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 6px;
+}
+
+/* ==========================================
    TABLET  (max 992px)
    ========================================== */
 @media (max-width: 992px) {
@@ -951,14 +1132,627 @@ body {
 
     .service-card { padding: 35px 20px; }
 }
+.booking-section-raw {
+    display: flex; /* Flex box alignment */
+    width: 100%;
+    min-height: 600px;
+    background-color: var(--bg-color);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 80px 4%; /* Outer breathing padding */
+}
 
+/* 🌟 Left Column: Exact 50% Width */
+.booking-left-col {
+    flex: 0 0 50%;
+    width: 50%;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+
+/* Form Inner Styling Container (Your startup design) */
+.booking-form-box {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(44, 33, 24, 0.03);
+    box-sizing: border-box;
+}
+
+.booking-sub {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.booking-head {
+    font-family: var(--font-heading);
+    font-size: 2.3rem;
+    color: var(--text-dark);
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.raw-booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.raw-form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.raw-form-row.triple-split {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 1fr;
+    gap: 12px;
+}
+
+.raw-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.raw-form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.raw-booking-form input,
+.raw-booking-form select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(44, 33, 24, 0.12);
+    background-color: white;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.raw-booking-form input:focus,
+.raw-booking-form select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(168, 36, 36, 0.05);
+}
+
+/* Submit Action */
+.raw-submit-btn {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2c2118, #463428);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 5px;
+}
+
+.raw-submit-btn:hover {
+    background: linear-gradient(135deg, var(--primary-color), #851b1b);
+    transform: translateY(-2px);
+}
+
+/* 🌟 Map Container Setup */
+.booking-dynamic-showcase {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* 🌟 Neon Glowing Radial Background behind cards */
+.glow-pulse-ring {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(168, 36, 36, 0.15) 0%, rgba(255, 249, 243, 0) 70%);
+    z-index: 1;
+    border-radius: 50%;
+    animation: pulseGlow 4s infinite ease-in-out;
+    pointer-events: none;
+}
+
+/* Base Master Style for Cards with Glassmorphism & Micro Shadows */
+.glow-card {
+    position: relative;
+    z-index: 2;
+    border-radius: 28px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(44, 33, 24, 0.03);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+}
+
+/* 1. Main Large Hero Card Styling */
+.hero-visual-card {
+    height: 360px;
+    width: 100%;
+    box-shadow: 0 20px 45px rgba(44, 33, 24, 0.04);
+}
+
+.image-zoom-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.pulse-showcase-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Shimmer overlay block effect */
+.luxury-gradient-shimmer {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(44, 33, 24, 0.9) 15%, rgba(44, 33, 24, 0.2) 60%, rgba(44, 33, 24, 0));
+    z-index: 2;
+}
+
+/* Hero Content Styling overlaid on image */
+.glow-card-content {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 35px;
+    z-index: 3;
+}
+
+.glow-card-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: #FFF9F3;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.35;
+}
+
+/* 🌟 TADAKTA BHADAKTA ELEMENT: Infinite Sliding Marquee Badge */
+.infinite-marquee-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 4;
+    background: var(--primary-color); /* Deep Neon Red Accent */
+    padding: 8px 0;
+    width: 240px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(168, 36, 36, 0.3);
+}
+
+.marquee-track {
+    display: flex;
+    white-space: nowrap;
+    animation: marqueeRun 12s linear infinite;
+}
+
+.marquee-track span {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Hero Card Hover Trigger Styles */
+.hero-visual-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 30px 60px rgba(168, 36, 36, 0.12);
+}
+
+.hero-visual-card:hover .pulse-showcase-img {
+    transform: scale(1.06) rotate(1deg); /* Soft luxury perspective rotation */
+}
+
+
+/* 2. Bottom Twin Bento Row Config & Float Animations */
+.dynamic-bento-row {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.bento-mini-box {
+    flex: 1;
+    padding: 28px 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-sizing: border-box;
+}
+
+/* Distinctive Dark Minimalist Box Theme */
+.bento-mini-box.royal-dark-box {
+    background: #2c2118;
+    border: 1px solid rgba(44, 33, 24, 0.1);
+}
+
+.bento-mini-box.royal-dark-box h4 { color: #FFF9F3; }
+.bento-mini-box.royal-dark-box p { color: #bcaba0; }
+
+/* Icon wrappers base setups */
+.bento-icon-wrapper {
+    font-size: 1.8rem;
+    width: 54px;
+    height: 54px;
+    background: #FFF9F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(44, 33, 24, 0.04);
+    position: relative;
+    z-index: 2;
+}
+
+/* Hover Accent bottom expanding layout bars */
+.card-hover-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0%; height: 3px;
+    background: #2c2118;
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-hover-line.primary-accent {
+    background: var(--primary-color);
+}
+
+/* Hover triggers for smaller boxes */
+.bento-mini-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(44, 33, 24, 0.06);
+}
+
+.bento-mini-box:hover .card-hover-line {
+    width: 100%;
+}
+
+/* 🌟 DYNAMIC SEPARATED CONSTANT TIMED FLOATING CYCLE */
+.float-up-1 { animation: constantFloat1 4s infinite ease-in-out; }
+.float-up-2 { animation: constantFloat2 4.5s infinite ease-in-out; }
+
+
+/* 3. Retro Aesthetic Neon Edge Stamp Controls */
+.neon-retro-stamp {
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+    background: #FFF9F3;
+    border: 1px dashed var(--primary-color);
+    color: var(--text-dark);
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 25px rgba(168, 36, 36, 0.05);
+    z-index: 5;
+    transform: rotate(-4deg);
+    animation: stampWobble 3s infinite ease-in-out;
+}
+
+
+/* ==========================================
+   🌟 ANIMATIONS KEYFRAMES CONFIGURATION
+   ========================================== */
+@keyframes marqueeRun {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; }
+}
+
+@keyframes constantFloat1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes constantFloat2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes stampWobble {
+    0%, 100% { transform: rotate(-4deg) translateY(0); }
+    50% { transform: rotate(-1deg) translateY(-3px); }
+}
+
+.site-footer {
+    background-color: #2c2118; /* Deep rich dark brown/charcoal for premium contrast */
+    color: #e6dfda; /* Soft white/cream text so it's easy on the eyes */
+    padding: 80px 6% 30px 6%;
+    font-family: var(--font-body), sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr; /* 3 Columns layout */
+    gap: 50px;
+}
+
+/* Brand Column Styles */
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: #FFF9F3; /* Crisp cream color for logo heading */
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.footer-tagline {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #bcaba0; /* Muted contrast text */
+    margin-bottom: 24px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials a {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.footer-socials a:hover {
+    background: var(--primary-color); /* Deep red hover accent */
+    transform: translateY(-3px);
+}
+
+/* Headings inside footer columns */
+.footer-column h4 {
+    color: #FFF9F3;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+/* Subtle accent line under column title */
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 35px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* Menu links styling */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #bcaba0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px; /* Tiny active movement element */
+}
+
+/* Contact Details List Styling */
+.footer-contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.f-icon {
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.f-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #bcaba0;
+}
+
+.f-text a {
+    color: #bcaba0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.f-text a:hover {
+    color: var(--primary-color);
+}
+
+/* Bottom Bar Copyright Area */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 60px auto 0 auto;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Minimal soft separation line */
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #8c7b70;
+}
+/* ==========================================
+   MOBILE CAROUSEL  (max 992px)
+   ========================================== */
+@media (max-width: 992px) {
+
+    .reviews-section {
+        padding: 60px 0 48px 0;
+        overflow: hidden;
+    }
+
+    .reviews-section .section-title,
+    .reviews-section .section-subtitle,
+    .rv-meta {
+        padding: 0 20px;
+    }
+
+    /* Clip the sliding track */
+    .rv-track-wrap {
+        overflow: hidden;
+        touch-action: pan-y;
+    }
+
+    /* Switch from grid to flex row */
+    .rv-track {
+        display: flex;
+        grid-template-columns: unset;
+        gap: 0;
+        max-width: unset;
+        margin: 0;
+        transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+    }
+
+    .rv-card {
+        flex: 0 0 82%;
+        width: 82%;
+        margin: 0 9%;
+        border-radius: 22px;
+        
+    }
+
+    .rv-card:hover {
+        transform: none;
+    }
+
+    /* Show dots on mobile */
+    .rv-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 24px;
+        margin-bottom: 4px;
+    }
+
+    .rv-stats-row {
+        gap: 30px;
+        margin: 28px 20px 0 20px;
+        padding-top: 28px;
+    }
+    .booking-section-raw {
+        flex-direction: column; /* Stacks vertically safely on mobile */
+        padding: 50px 20px;
+        gap: 30px;
+    }
+
+    .booking-left-col,
+    .booking-right-col {
+        flex: 0 0 100%;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .booking-right-col iframe {
+        min-height: 350px;
+        height: 350px;
+    }
+    
+    .raw-form-row.triple-split {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .booking-dynamic-showcase {
+        margin-top: 30px;
+    }
+    .footer-container {
+        grid-template-columns: 1fr; /* Stacks column linearly on smaller touch screens */
+        gap: 40px;
+    }
+    
+    .site-footer {
+        padding: 60px 24px 20px 24px;
+    }
+    
+    .footer-bottom {
+        margin-top: 40px;
+    }
+}
 /* ==========================================
    SMALL PHONES  (max 480px)
    ========================================== */
 @media (max-width: 480px) {
 
     .header { padding: 20px 5%; }
-
     .hero-text h1 { font-size: 2.4rem; }
 
     .menu-card {
@@ -966,12 +1760,19 @@ body {
         width: 88vw;
         max-width: 88vw;
     }
-
     .services-grid { grid-template-columns: 1fr; }
-
     .metrics-row {justify-content: space-around;}
-
     .about-visuals-grid { grid-template-columns: 1fr; }
-
     .img-wrapper { height: 260px; }
+    .dynamic-bento-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .hero-visual-card {
+        height: 280px;
+    }
+    .infinite-marquee-badge {
+        width: 180px;
+        left: 15px; top: 15px;
+    }
 }
