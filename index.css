@@ -270,7 +270,7 @@ body {
    ABOUT SECTION
    ========================================== */
 .about-section {
-    padding: 120px 24px;
+    padding: 20px 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 64px;
@@ -396,10 +396,11 @@ body {
    MENU SECTION  (single clean definition)
    ========================================== */
 .menu-section {
-    padding: 120px 8%;
+    padding: 100px 8%;
     background: #f7efe8;
     position: relative;
     overflow: visible;
+    
 }
 
 /* SWIPE HINT — hidden on desktop */
@@ -416,8 +417,7 @@ body {
     padding: 80px 20px 60px 20px;
 }
 
-/* CARD */
-/* REPLACE your existing .menu-card styles with this */
+
 .menu-card {
     width: 320px;
     background: rgba(255, 255, 255, 0.65);
@@ -436,7 +436,7 @@ body {
                 box-shadow 0.6s ease;
     will-change: transform, opacity;
 
-    /* ANIMATION HATAO — yahi problem thi */
+    
 }
 .menu-card.revealed {
     opacity: 1;
