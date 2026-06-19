@@ -15,8 +15,10 @@
     <div class="floating-ingredient tomato-1">🍅</div>
 
     <header class="header">
+        <div class="logo-section">
+        <img src="./Assests/logo.png" class="restaurant-logo" alt="Restaurant logo">
         <div class="logo">Banarasi <span>Starter King</span></div>
-        
+        </div>  
         <input type="checkbox" id="mobile-menu-checkbox">
         <label for="mobile-menu-checkbox" class="mobile-hamburger-btn">Menu ☰</label>
         
@@ -60,6 +62,86 @@
         </div>
         
     </main>
+    <section class="whatsapp-lead-section">
+    <div class="lead-glow-ring"></div>
+    
+    <div class="lead-wrapper">
+        <div class="lead-header-content">
+            <span class="lead-badge">🔥 Limited Time Offer</span>
+            <h2 class="lead-main-title">Join Us on Whatsapp</h2>
+            <p class="lead-desc">Get instant access to secret discount codes, weekend special menus, and complimentary free delivery on your first order. No spam, only delicious updates.</p>
+            
+            <div class="lead-benefits">
+                <div class="benefit-item">
+                    <span class="benefit-icon">🎁</span>
+                    <p>Flat 10% OFF Welcome Coupon</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">⚡</span>
+                    <p>Priority Festival Catering Booking</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lead-card-box">
+            <form action="#" class="interactive-lead-form">
+                <label class="form-label-meta">Choose Your Welcome Reward</label>
+                
+                <div class="reward-cards-grid">
+                    <label class="reward-card-label">
+                        <input type="radio" name="welcome_reward" value="10_off" checked class="hidden-radio-state">
+                        <div class="reward-card-inner">
+                            <span class="reward-emoji">🎉</span>
+                            <div class="reward-details">
+                                <strong>10% Off</strong>
+                                <small>On first order</small>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="reward-card-label">
+                        <input type="radio" name="welcome_reward" value="free_delivery" class="hidden-radio-state">
+                        <div class="reward-card-inner">
+                            <span class="reward-emoji">🛵</span>
+                            <div class="reward-details">
+                                <strong>Free Delivery</strong>
+                                <small>Across Varanasi</small>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-inline-group">
+                    <div class="phone-input-wrapper">
+                        <span class="country-prefix">+91</span>
+                        <input type="tel" name="whatsapp_num" placeholder="Enter WhatsApp Number" required pattern="[0-9]{10}">
+                    </div>
+                    <button type="submit" class="action-submit-btn">
+                        <span>Unlock Offers</span>
+                        <svg class="arrow-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+
+                <div class="form-privacy-disclaimer">
+                    <span class="lock-icon">🔒</span> We value your privacy. Unsubscribe anytime in 1-click.
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<div class="whatsapp-container">
+    
+
+<span class="whatsapp-text">Contact on WhatsApp</span>
+    <a href="https://wa.me/919450412211?text=Hello!%20I%20am%20interested%20in%20your%20services." 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="inline-block hover:scale-105 transition-transform duration-200">
+    <img src="./Assests/whatsapp-logo.svg" class="whatsapp-contact" alt="whatsapp-contact">
+    </a>
+    
+</div>
+
 <section id="about" class="about-section container">
     <div class="about-visuals-grid">
         
@@ -484,8 +566,8 @@
     
     <div class="booking-left-col">
         <div class="booking-form-box">
-            <span class="booking-sub">Reservation</span>
-            <h2 class="booking-head">Book A Table</h2>
+            <span class="booking-sub">Enquiry Form</span>
+            <h2 class="booking-head">Get in Touch</h2>
             
             <form class="raw-booking-form" onsubmit="event.preventDefault();">
                 <div class="raw-form-row">
@@ -511,7 +593,7 @@
 
                 <div class="raw-form-row triple-split">
                     <div class="raw-form-group">
-                        <label>Booking Date</label>
+                        <label>preferred Date</label>
                         <input type="date" required>
                     </div>
                     <div class="raw-form-group">
@@ -538,7 +620,7 @@
                 </div>
 
                 <button type="submit" class="raw-submit-btn">
-                    Confirm Reservation <span>→</span>
+                    Submit Request <span>→</span>
                 </button>
             </form>
         </div>

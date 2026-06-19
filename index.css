@@ -29,7 +29,9 @@ body {
     overflow-x: hidden;
     position: relative;
 }
-
+.restaurant-logo{
+    width:75px;
+}
 /* ==========================================
    FLOATING INGREDIENTS
    ========================================== */
@@ -42,9 +44,9 @@ body {
     opacity: 0.7;
 }
 
-.leaf-1   { top: 15%; left: 5%;  animation: floatAround 8s  ease-in-out infinite; }
+.leaf-1   { top: 5%; left: 5%;  animation: floatAround 8s  ease-in-out infinite; }
 .leaf-2   { top: 10%; right: 8%; animation: floatAround 11s ease-in-out infinite alternate; }
-.chilli-1 { top: 40%; left: 45%; animation: floatAround 9s  ease-in-out infinite 1s; }
+.chilli-1 { top: 15%; left: 45%; animation: floatAround 9s  ease-in-out infinite 1s; }
 .tomato-1 { top: 80%; left: 12%; animation: floatAround 14s ease-in-out infinite; }
 
 @keyframes floatAround {
@@ -64,15 +66,20 @@ body {
     position: relative;
     z-index: 100;
 }
-
+.logo-section{
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
 .logo {
+    color: var(--primary-color) !important;
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--text-dark);
 }
 
-.logo span { color: var(--primary-color); }
+.logo span {color:#ffb600;}
 
 .navbar a {
     text-decoration: none;
@@ -264,6 +271,339 @@ body {
 @keyframes curvedTopLeftEntrance {
     0%   { opacity: 0; transform: translate(-100vw, -100vh) scale(0.2) rotate(-240deg); }
     100% { opacity: 1; transform: translate(0, 0)           scale(1)   rotate(0deg);    }
+}
+/* ==========================================
+   WHATSAPP VIP CLUB LEAD CAPTURE SECTION
+   ========================================== */
+.whatsapp-lead-section {
+    position: relative;
+    padding: 90px 8%;
+    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whatsapp-container {
+     position:fixed;
+    right:3%;
+    bottom:5%;
+    z-index:1200;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+.whatsapp-contact{
+    width:60px;
+    cursor: pointer;
+}
+.whatsapp-text {
+    background-color: #f5f5f5;
+box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.12),  /* Layer 1: Sharp, close shadow for crisp edges */
+    0 8px 16px rgba(0, 0, 0, 0.06), /* Layer 2: Medium ambient shadow for depth */
+    0 16px 32px rgba(0, 0, 0, 0.04);
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-right: 10px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(20px);
+    animation: showText 0.6s ease forwards;
+    animation-delay: 3s;
+}
+@keyframes showText {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.lead-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Ambient Radial Light Glow Behind Form */
+.lead-glow-ring {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(168, 36, 36, 0.08) 0%, rgba(255, 249, 243, 0) 70%);
+    z-index: 1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: slowAmbientPulse 6s infinite ease-in-out;
+    pointer-events: none;
+}
+
+/* Left Side Content Styling */
+.lead-header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.lead-badge {
+    align-self: flex-start;
+    background-color: rgba(168, 36, 36, 0.08);
+    color: var(--primary-color);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.lead-main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.lead-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 30px;
+    max-width: 540px;
+}
+
+.lead-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.benefit-icon {
+    font-size: 1.2rem;
+}
+
+.benefit-item p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Glassmorphism Card Container Box */
+.lead-card-box {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 28px;
+    padding: 40px;
+    box-shadow: 0 20px 45px rgba(44, 33, 24, 0.04);
+    position: relative;
+    transition: transform 0.4s var(--curved-easing);
+}
+
+.lead-card-box:hover {
+    transform: translateY(-4px);
+}
+
+.form-label-meta {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+/* Interactive Card Options Selector Grid */
+.reward-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.reward-card-label {
+    cursor: pointer;
+    width: 100%;
+}
+
+.reward-card-inner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid rgba(44, 33, 24, 0.1);
+    border-radius: 16px;
+    transition: all 0.3s var(--curved-easing);
+}
+
+.reward-emoji {
+    font-size: 1.5rem;
+}
+
+.reward-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.reward-details strong {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.reward-details small {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Interactive States */
+.hidden-radio-state:checked + .reward-card-inner {
+    border-color: var(--primary-color);
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(168, 36, 36, 0.08);
+    transform: scale(1.02);
+}
+
+.reward-card-label:hover .reward-card-inner {
+    border-color: rgba(168, 36, 36, 0.3);
+}
+
+/* Single Inline Input Group Row Layout */
+.input-inline-group {
+    display: flex;
+    background: #ffffff;
+    border: 1px solid rgba(44, 33, 24, 0.12);
+    border-radius: 16px;
+    padding: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-inline-group:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(168, 36, 36, 0.05);
+}
+
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding-left: 12px;
+}
+
+.country-prefix {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-right: 8px;
+}
+
+.phone-input-wrapper input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    font-family: var(--font-body);
+}
+
+/* Form Action Buttons with Smooth Interactions */
+.action-submit-btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--primary-color), #851b1b);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s, transform 0.2s;
+    white-space: nowrap;
+}
+
+.arrow-svg {
+    transition: transform 0.3s var(--curved-easing);
+}
+
+.action-submit-btn:hover {
+    background: linear-gradient(135deg, #be2d2d, var(--primary-color));
+}
+
+.action-submit-btn:hover .arrow-svg {
+    transform: translateX(4px);
+}
+
+.form-privacy-disclaimer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 18px;
+}
+
+/* Animations Elements */
+@keyframes slowAmbientPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN ADAPTATIONS (Media Breakpoints)
+   ========================================== */
+@media (max-width: 992px) {
+    .whatsapp-lead-section {
+        padding: 60px 24px;
+    }
+    
+    .lead-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .lead-badge {
+        align-self: center;
+    }
+    
+    .lead-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .lead-benefits {
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .lead-card-box {
+        padding: 30px 20px;
+    }
 }
 
 /* ==========================================
@@ -1653,7 +1993,33 @@ body {
    MOBILE CAROUSEL  (max 992px)
    ========================================== */
 @media (max-width: 992px) {
-
+.reward-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .input-inline-group {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        padding: 0;
+        gap: 12px;
+    }
+    
+    .phone-input-wrapper {
+        background: #ffffff;
+        border: 1px solid rgba(44, 33, 24, 0.12);
+        border-radius: 12px;
+        padding: 14px;
+        width: 100%;
+    }
+    
+    .action-submit-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px;
+        border-radius: 12px;
+    }
     .reviews-section {
         padding: 60px 0 48px 0;
         overflow: hidden;
