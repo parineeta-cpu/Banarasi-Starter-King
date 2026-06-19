@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banarasi Starter King | Premium Delivery</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght=600;800&family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,18 +15,19 @@
     <div class="floating-ingredient tomato-1">🍅</div>
 
     <header class="header">
-      
-           
         <div class="logo">Banarasi <span>Starter King</span></div>
+        
+        <input type="checkbox" id="mobile-menu-checkbox">
         <label for="mobile-menu-checkbox" class="mobile-hamburger-btn">Menu ☰</label>
-            <input type="checkbox" id="mobile-menu-checkbox">
+        
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#menu">Menus</a>
             <a href="#services">Services</a>
             <a href="#testimonials">Reviews</a>
         </nav>
-        <a href="tel:+919918675266" class="btn-order-now">Order Now</a>
+
+        <a href="tel:+919918675266" class="btn-order-now desktop-order-btn">Order Now</a>
     </header>
 
     <main class="hero-container" id="home">
@@ -44,6 +44,7 @@
             
             <div class="cta-group">
                 <a href="#menu" class="btn-primary">Explore Menu</a>
+                <a href="tel:+919918675266" class="btn-order-now mobile-order-btn">Order Now</a>
                 <span class="sauce-disclaimer">*Note: Please arrange your own sauce!</span>
             </div>
         </div>
@@ -57,49 +58,373 @@
                 <p>A savory, earthy pairing where juicy tomatoes balance the deep, rich umami of mushrooms.</p>
             </div>
         </div>
-    </main>
-
-    <section class="menu-section" id="menu">
-        <h2 class="section-title">Most Liked Items From The Menu</h2>
         
-        <div class="menu-grid">
-            <div class="menu-card ">
-                <div class="card-img-container">
-                    <img src="https://www.banarasistarterking.com/img/inn/4.png" alt="Spring Roll">
+    </main>
+<section id="about" class="about-section container">
+    <div class="about-visuals-grid">
+        
+        
+        <div class="img-wrapper">
+            <div class="flip-inner">
+                <div class="card-face front">
+                    <img src="https://www.banarasistarterking.com/img/menu/5.png" alt="Vegetable">
                 </div>
-                <div class="card-body">
-                    <h3>Spring Roll</h3>
-                    <span class="price">₹49 / pcs</span>
-                    <p>Crispy golden outer layer packed with perfectly seasoned vegetables.</p>
-                    <button class="add-to-cart">Add to Order</button>
-                </div>
-            </div>
-
-            <div class="menu-card ">
-                <div class="card-img-container">
-                    <img src="https://www.banarasistarterking.com/img/inn/5.png?auto=format&fit=crop&q=80&w=400" alt="Dhai Kabab">
-                </div>
-                <div class="card-body">
-                    <h3>Dhai Kabab</h3>
-                    <span class="price">₹499 / Kg</span>
-                    <p>Melt-in-your-mouth texture blending rich yogurt with local spices.</p>
-                    <button class="add-to-cart">Add to Order</button>
+                <div class="card-face back">
+                    
+                    <img src="https://www.banarasistarterking.com/img/menu/2.png" alt="Chilli Paneer">
                 </div>
             </div>
-
-            <div class="menu-card">
-                <div class="card-img-container">
-                    <img src="https://www.banarasistarterking.com/img/inn/1.png" alt="Paneer Masala">
+        </div>
+        
+       
+        <div class="img-wrapper offset-image">
+            <div class="flip-inner">
+                <div class="card-face front">
+                    <img src="https://www.banarasistarterking.com/img/menu/1.png" alt="Fry">
                 </div>
-                <div class="card-body">
-                    <h3>Paneer Masala</h3>
-                    <span class="price">₹600 / Kg</span>
-                    <p>Premium rich gravy bursting with authentic Banarasi flavor layers.</p>
-                    <button class="add-to-cart">Add to Order</button>
+                <div class="card-face back">
+                    
+                    <img src="https://www.banarasistarterking.com/img/menu/3.png" alt="Gravy Momos">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+        <div class="about-text-content">
+            <span class="section-meta-tag">Who We Are</span>
+            <h2 class="section-title">Welcome to Banarasi Starter King</h2>
+            <p class="paragraph-lead">
+                We are your premier culinary destination for mouth-watering vegetarian starters, curated meals, and pristine premium catering options. We focus sharply on bringing authentic regional flavors straight to your plate.
+            </p>
+            <p class="paragraph-standard">
+                Whether you are preparing a small family get-together, hosting a critical corporate session, or coordinating dynamic community festivals in Varanasi, we combine clean processing parameters, flawless seasoning strategies, and warm execution protocols to maximize your celebration.
+            </p>
+            
+            <div class="metrics-row">
+                <div class="metric-item">
+                    <h4 class="metric-val">100%</h4>
+                    <p class="metric-lbl">Pure Vegetarian Kitchen</p>
+                </div>
+                <div class="metric-item">
+                    <h4 class="metric-val">Free</h4>
+                    <p class="metric-lbl">Delivery Across Varanasi</p>
                 </div>
             </div>
         </div>
     </section>
 
+
+    <section class="menu-section" id="menu">
+    <h2 class="section-title">Most Liked Items From The Menu</h2>
+    
+    <div class="menu-grid">
+        <div class="menu-card">
+            <div class="card-img-container">
+                <img src="https://www.banarasistarterking.com/img/inn/4.png" alt="Spring Roll">
+            </div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="tag">Crunchy</span>
+                    <span class="tag">Fresh Veggies</span>
+                </div>
+                <h3>Spring Roll</h3>
+                <p>Crispy golden outer layer packed with perfectly seasoned vegetables.</p>
+                
+                <div class="card-footer">
+                    <span class="price">₹49 <small>/ pcs</small></span>
+                    <button class="add-to-cart">
+                        Add to Order 
+                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <div class="card-img-container">
+                <img src="https://www.banarasistarterking.com/img/inn/5.png?auto=format&fit=crop&q=80&w=400" alt="Dhai Kabab">
+            </div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="tag">MeltInMouth</span>
+                    <span class="tag">Local Spices</span>
+                </div>
+                <h3>Dhai Kabab</h3>
+                <p>Melt-in-your-mouth texture blending rich yogurt with local spices.</p>
+                
+                <div class="card-footer">
+                    <span class="price">₹499 <small>/ Kg</small></span>
+                    <button class="add-to-cart">
+                        Add to Order 
+                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <div class="card-img-container">
+                <img src="https://www.banarasistarterking.com/img/inn/1.png" alt="Paneer Masala">
+            </div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="tag">Premium Rich</span>
+                    <span class="tag">Banarasi Twist</span>
+                </div>
+                <h3>Paneer Masala</h3>
+                <p>Premium rich gravy bursting with authentic Banarasi flavor layers.</p>
+                
+                <div class="card-footer">
+                    <span class="price">₹600 <small>/ Kg</small></span>
+                    <button class="add-to-cart">
+                        Add to Order 
+                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <div class="card-img-container">
+                <img src="https://www.banarasistarterking.com/assets/img/featured-dishes-1.png" alt="Mushroom tomato">
+            </div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="tag">Crunchy</span>
+                    <span class="tag">Fresh Veggies</span>
+                </div>
+                <h3>Mushroom tomato</h3>
+                <p>A savory, earthy pairing where juicy tomatoes balance the deep, rich umami of mushrooms.</p>
+                
+                <div class="card-footer">
+                    <span class="price">₹500 <small>/ kg</small></span>
+                    <button class="add-to-cart">
+                        Add to Order 
+                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <div class="card-img-container">
+                <img src="https://www.banarasistarterking.com/img/inn/3.png" alt="Dal fry">
+            </div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="tag">Crunchy</span>
+                    <span class="tag">Fresh Veggies</span>
+                </div>
+                <h3>Dal fry</h3>
+                <p>Spiced lentils, tempered with ghee and aromatics.</p>
+                
+                <div class="card-footer">
+                    <span class="price">₹300 <small>/ kg</small></span>
+                    <button class="add-to-cart">
+                        Add to Order 
+                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <div class="card-img-container">
+                <img src="https://www.banarasistarterking.com/img/inn/2.png" alt="Peas pulao">
+            </div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="tag">Crunchy</span>
+                    <span class="tag">Fresh Veggies</span>
+                </div>
+                <h3>Peas Pulao</h3>
+                <p>Fragrant premium basmati rice steamed gently alongside tender green peas.</p>
+                
+                <div class="card-footer">
+                    <span class="price">₹299 <small>/ kg</small></span>
+                    <button class="add-to-cart">
+                        Add to Order 
+                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p class="swipe-instruction">
+   Swipe to explore<span class="swipe-arrow">→</span>
+  </span>
+</p>
+</section>
+<section class="services-section" id="services">
+    <h2 class="services-main-title">Host a Royal Celebration</h2>
+    <p class="services-subtitle">Experience luxury catering tailored perfectly for your most treasured moments</p>
+    
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="royal-crest-container">
+                <div class="crest-bg-glow"></div>
+                <div class="royal-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M20 21v-4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v4M17 11V8a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v3M12 2v2M8 2v2M16 2v2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="service-body">
+                <h3>Birthday Party</h3>
+                <p>Celebrate unforgettable birthdays with delicious food, exquisite presentation, and a vibrant premium ambiance.</p>
+                <a href="tel:+91XXXXXXXXXX" class="royal-call-btn">
+                    <span>Call Now</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="royal-crest-container">
+                <div class="crest-bg-glow"></div>
+                <div class="royal-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M5 22h6M19 22h-6M8 22V13M16 22V13M5 3h6l-1 10H6L5 3zM19 3h-6l1 10h4l1-10z" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="service-body">
+                <h3>Kitty Party</h3>
+                <p>Host fun-filled, elegant kitty parties with your close friends in a cozy, aesthetically delightful catering setting.</p>
+                <a href="tel:+91XXXXXXXXXX" class="royal-call-btn">
+                    <span>Call Now</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="royal-crest-container">
+                <div class="crest-bg-glow"></div>
+                <div class="royal-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="service-body">
+                <h3>Anniversary Party</h3>
+                <p>Celebrate grand milestones of love and togetherness with sophisticated flavor profiles and elegant arrangements.</p>
+                <a href="tel:+91XXXXXXXXXX" class="royal-call-btn">
+                    <span>Call Now</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="royal-crest-container">
+                <div class="crest-bg-glow"></div>
+                <div class="royal-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <circle cx="12" cy="14" r="7"/>
+                        <path d="M12 7V2l4 2-4 1-4-1 4-2z" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="service-body">
+                <h3>Ring Ceremony</h3>
+                <p>Make your magical pre-wedding moments shine bright with our elite signature presentation and royal menu layout.</p>
+                <a href="tel:+91XXXXXXXXXX" class="royal-call-btn">
+                    <span>Call Now</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="royal-crest-container">
+                <div class="crest-bg-glow"></div>
+                <div class="royal-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="service-body">
+                <h3>House Party</h3>
+                <p>Turn your home into a premium celebration zone with effortless, stellar luxury fine-dining setup and custom live counters.</p>
+                <a href="tel:+91XXXXXXXXXX" class="royal-call-btn">
+                    <span>Call Now</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="royal-crest-container">
+                <div class="crest-bg-glow"></div>
+                <div class="royal-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="service-body">
+                <h3>Office Party</h3>
+                <p>Professional, corporate-grade executive setups blending exquisite multi-cuisine dishes with premium dynamic hospitality services.</p>
+                <a href="tel:+91XXXXXXXXXX" class="royal-call-btn">
+                    <span>Call Now</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const menuCards = document.querySelectorAll(".menu-card");
+    const menuObserverOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.12 
+    };
+    const menuObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+                observer.unobserve(entry.target); // Engine processing safety clear
+            }
+
+        });
+    }, menuObserverOptions);
+    menuCards.forEach(card => {
+        menuObserver.observe(card);
+    });
+} ); 
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const serviceCards = document.querySelectorAll(".service-card");
+    const serviceObserverOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.12 
+    };
+    const serviceObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+                observer.unobserve(entry.target); // Engine processing safety clear
+            }
+
+        });
+    }, serviceObserverOptions);
+    serviceCards.forEach(card => {
+        serviceObserver.observe(card);
+    });
+} ); 
+
+   
+</script>
 </body>
 </html>
